@@ -1,1 +1,7 @@
-{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"hfrlc:silver_coin"},"components":{"minecraft:icon":{"texture":"hfrlc:silver_coin"}}}}
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": { "identifier": "hfrlc:silver_coin" },
+		"components": { "minecraft:icon": { "texture": "hfrlc:silver_coin" } }
+	}
+}

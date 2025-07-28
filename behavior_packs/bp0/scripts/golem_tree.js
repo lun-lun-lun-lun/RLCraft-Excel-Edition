@@ -1,1 +1,5 @@
-const knockback_horizontal_strength=3,knockback_vertical_strength=.25;export function hitEntity(t,n,c){n.applyKnockback(c.x,c.z,3,.25)}
+const knockback_horizontal_strength = 3,
+	knockback_vertical_strength = 0.25;
+export function hitEntity(t, n, c) {
+	n.applyKnockback(c.x, c.z, 3, 0.25);
+}

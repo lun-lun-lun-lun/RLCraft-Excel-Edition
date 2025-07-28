@@ -1,1 +1,7 @@
-{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"hfrlc:air_essence"},"components":{"minecraft:icon":{"texture":"hfrlc:air_essence"}}}}
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": { "identifier": "hfrlc:air_essence" },
+		"components": { "minecraft:icon": { "texture": "hfrlc:air_essence" } }
+	}
+}

@@ -1,1 +1,8 @@
-{"pools":[{"rolls":1,"entries":[{"type":"item","name":"minecraft:diamond_chestplate"}]}]}
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [{ "type": "item", "name": "minecraft:diamond_chestplate" }]
+		}
+	]
+}
