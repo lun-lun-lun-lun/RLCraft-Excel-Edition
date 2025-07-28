@@ -33,7 +33,8 @@
 				"minecraft:biome_filter": {
 					"any_of": [
 						{ "test": "has_biome_tag", "value": "mesa" },
-						{ "test": "has_biome_tag", "value": "desert" }
+						{ "test": "has_biome_tag", "value": "desert" },
+						{ "test": "has_biome_tag", "value": "nether" }
 					]
 				}
 			},
@@ -63,7 +64,8 @@
 				"minecraft:biome_filter": {
 					"any_of": [
 						{ "test": "has_biome_tag", "value": "mesa" },
-						{ "test": "has_biome_tag", "value": "desert" }
+						{ "test": "has_biome_tag", "value": "desert" },
+						{ "test": "has_biome_tag", "value": "nether" }
 					]
 				}
 			}
