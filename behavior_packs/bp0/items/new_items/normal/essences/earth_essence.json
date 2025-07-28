@@ -1,0 +1,7 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": { "identifier": "hfrlc:earth_essence" },
+		"components": { "minecraft:icon": { "texture": "hfrlc:earth_essence" } }
+	}
+}

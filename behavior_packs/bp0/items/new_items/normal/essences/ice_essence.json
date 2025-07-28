@@ -1,0 +1,7 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": { "identifier": "hfrlc:ice_essence" },
+		"components": { "minecraft:icon": { "texture": "hfrlc:ice_essence" } }
+	}
+}

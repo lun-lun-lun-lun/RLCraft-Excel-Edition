@@ -1,0 +1,78 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"identifier": "hfrlc:wyvern_earth",
+		"population_control": "hfrlc:wyvern_earth_end_spawn_delay",
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 7,
+					"adjust_for_weather": true
+				},
+				"minecraft:biome_filter": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "end_highlands"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "end_midlands"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "end_barrens"
+					}
+				],
+				"minecraft:spawns_on_block_filter": [
+					"minecraft:end_stone",
+					"minecraft:end_stone_bricks",
+					"minecraft:purpur_block",
+					"minecraft:purpur_pillar"
+				],
+				"minecraft:weight": {
+					"default": 18
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 1,
+					"event": "spawn_big_wyvern",
+					"event_skip_count": 1
+				},
+				"minecraft:permute_type": [
+					{
+						"weight": 100
+					}
+				],
+				"minecraft:spawn_event": "spawn_big_wyvern",
+				"minecraft:density_limit": {
+					"surface": 0.1
+				},
+				"minecraft:distance_filter": {
+					"min": 52,
+					"max": 84
+				},
+				"minecraft:delay_filter": {
+					"min": 1300,
+					"max": 1900
+				},
+				"minecraft:difficulty_filter": {
+					"min": "normal",
+					"max": "hard"
+				},
+				"minecraft:world_age_filter": {
+					"min": 8000
+				}
+			}
+		]
+	}
+}
