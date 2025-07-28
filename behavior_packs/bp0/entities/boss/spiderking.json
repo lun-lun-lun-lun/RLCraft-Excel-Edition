@@ -59,7 +59,7 @@
 				"generates_bubbles": false
 			},
 			"minecraft:collision_box": { "width": 2.5, "height": 2 },
-			"minecraft:experience_reward": { "on_death": "250" },
+			"minecraft:experience_reward": { "on_death": "950" },
 			"minecraft:is_hidden_when_invisible": {},
 			"minecraft:health": { "value": 500 },
 			"minecraft:attack": { "damage": 20, "effect_name": "poison", "effect_duration": 6 },

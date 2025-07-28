@@ -68,7 +68,7 @@
 			"minecraft:custom_hit_test": {
 				"hitboxes": [{ "width": 1.5, "height": 3.3, "pivot": [0, 1.65, 0] }]
 			},
-			"minecraft:experience_reward": { "on_death": "180" },
+			"minecraft:experience_reward": { "on_death": "1000" },
 			"minecraft:is_hidden_when_invisible": {},
 			"minecraft:attack": { "damage": [22, 22] },
 			"minecraft:knockback_resistance": { "value": 1 },

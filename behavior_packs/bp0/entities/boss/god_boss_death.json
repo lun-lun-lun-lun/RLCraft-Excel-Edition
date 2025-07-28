@@ -15,7 +15,7 @@
 		"component_groups": {
 			"fire_dragon_loot": {
 				"minecraft:scale": { "value": 0 },
-				"minecraft:experience_reward": { "on_death": 180 },
+				"minecraft:experience_reward": { "on_death": 5000 },
 				"minecraft:health": { "value": 0, "max": 0, "min": 0 }
 			}
 		},
