@@ -14,7 +14,8 @@
 				"minecraft:delay_filter": {
 					"min": 1200,
 					"max": 2400,
-					"spawn_chance": 10
+					"spawn_chance": 10,
+					"identifier": "spider_king_nether_spawn_delay"
 				},
 				"minecraft:biome_filter": {
 					"any_of": [
