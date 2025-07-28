@@ -19,7 +19,8 @@
 					"any_of": [
 						{ "test": "has_biome_tag", "value": "jungle" },
 						{ "test": "has_biome_tag", "value": "meadow" },
-						{ "test": "has_biome_tag", "value": "plains" }
+						{ "test": "has_biome_tag", "value": "plains" },
+						{ "test": "has_biome_tag", "value": "nether" }
 					]
 				}
 			}

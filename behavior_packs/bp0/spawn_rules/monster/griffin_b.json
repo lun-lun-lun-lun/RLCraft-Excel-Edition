@@ -21,7 +21,8 @@
 						{ "test": "has_biome_tag", "operator": "!=", "value": "frozen_peaks" },
 						{ "test": "has_biome_tag", "operator": "!=", "value": "grove" },
 						{ "test": "has_biome_tag", "operator": "!=", "value": "meadow" },
-						{ "test": "has_biome_tag", "operator": "!=", "value": "snowy_slopes" }
+						{ "test": "has_biome_tag", "operator": "!=", "value": "snowy_slopes" },
+						{ "test": "has_biome_tag", "value": "nether" }
 					]
 				}
 			}

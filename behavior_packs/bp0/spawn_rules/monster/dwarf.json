@@ -15,14 +15,24 @@
 					"spawn_chance": 50
 				},
 				"minecraft:distance_filter": { "min": 20, "max": 48 },
-				"minecraft:biome_filter": { "test": "has_biome_tag", "value": "frozen" },
+				"minecraft:biome_filter": {
+					"any_of": [
+						{ "test": "has_biome_tag", "value": "frozen" },
+						{ "test": "has_biome_tag", "value": "nether" }
+					]
+				},
 				"minecraft:herd": { "min_size": 2, "max_size": 4 }
 			},
 			{
 				"minecraft:spawns_underground": {},
 				"minecraft:weight": { "default": 50 },
 				"minecraft:density_limit": { "underground": 9 },
-				"minecraft:biome_filter": { "test": "has_biome_tag", "value": "dripstone_caves" },
+				"minecraft:biome_filter": {
+					"any_of": [
+						{ "test": "has_biome_tag", "value": "dripstone_caves" },
+						{ "test": "has_biome_tag", "value": "nether" }
+					]
+				},
 				"minecraft:herd": { "min_size": 2, "max_size": 4 }
 			}
 		]

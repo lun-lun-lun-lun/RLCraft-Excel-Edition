@@ -29,7 +29,12 @@
 				"minecraft:spawns_underground": {},
 				"minecraft:weight": { "default": 50 },
 				"minecraft:density_limit": { "underground": 2 },
-				"minecraft:biome_filter": { "test": "has_biome_tag", "value": "lush_caves" }
+				"minecraft:biome_filter": {
+					"any_of": [
+						{ "test": "has_biome_tag", "value": "lush_caves" },
+						{ "test": "has_biome_tag", "value": "nether" }
+					]
+				}
 			}
 		]
 	}
