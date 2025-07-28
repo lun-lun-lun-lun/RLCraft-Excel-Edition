@@ -1,5 +1,1 @@
-{
-	"pools": [
-		{ "rolls": 1, "entries": [{ "type": "item", "name": "minecraft:spider_eye" }] }
-	]
-}
+{"pools":[{"rolls":1,"entries":[{"type":"item","name":"minecraft:spider_eye"}]}]}
