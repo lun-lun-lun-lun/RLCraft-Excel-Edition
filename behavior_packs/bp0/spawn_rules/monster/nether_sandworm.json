@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "hfrlc:nether_sandworm_head",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:delay_filter": {
+					"min": 800,
+					"max": 1200,
+					"identifier": "nether_sandworm_spawn_delay",
+					"spawn_chance": 30
+				},
+				"minecraft:spawns_on_surface": {},
+				"minecraft:weight": { "default": 15 },
+				"minecraft:density_limit": { "surface": 1 },
+				"minecraft:herd": { "min_size": 1, "max_size": 1 },
+				"minecraft:distance_filter": { "min": 20, "max": 48 },
+				"minecraft:biome_filter": {
+					"any_of": [
+						{ "test": "has_biome_tag", "value": "nether" }
+					]
+				}
+			}
+		]
+	}
+}
