@@ -1,0 +1,44 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "hfrlc:god_boss_spawner",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"spawn_timer": {
+				"minecraft:timer": {
+					"time": 30,
+					"looping": false,
+					"time_down_event": { "event": "spawn_god_boss", "target": "self" }
+				}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": { "family": ["spawner"] },
+			"minecraft:collision_box": { "width": 0, "height": 0 },
+			"minecraft:pushable": { "is_pushable": false, "is_pushable_by_piston": false },
+			"minecraft:physics": { "has_gravity": false, "has_collision": false },
+			"minecraft:persistent": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": { "component_groups": ["spawn_timer"] }
+			},
+			"spawn_god_boss": {
+				"queue_command": {
+					"command": [
+						"summon hfrlc:god_boss ~~5~",
+						"tellraw @a {\"rawtext\":[{\"text\":\"§6§lTulum the Grandmaster has awakened in the End!\"}]}"
+					]
+				},
+				"add": { "component_groups": ["despawn"] }
+			}
+		}
+	}
+}
