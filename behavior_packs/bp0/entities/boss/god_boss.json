@@ -251,7 +251,30 @@
 			"skin_id_1": { "minecraft:skin_id": { "value": 1 } },
 			"skin_id_2": { "minecraft:skin_id": { "value": 2 } },
 			"skin_id_3": { "minecraft:skin_id": { "value": 3 } },
-			"skin_id_4": { "minecraft:skin_id": { "value": 4 } }
+			"skin_id_4": { "minecraft:skin_id": { "value": 4 } },
+			"break_beds": {
+				"minecraft:break_blocks": {
+					"breakable_blocks": [
+						"bed",
+						"white_bed",
+						"orange_bed",
+						"magenta_bed",
+						"light_blue_bed",
+						"yellow_bed",
+						"lime_bed",
+						"pink_bed",
+						"gray_bed",
+						"light_gray_bed",
+						"cyan_bed",
+						"purple_bed",
+						"blue_bed",
+						"brown_bed",
+						"green_bed",
+						"red_bed",
+						"black_bed"
+					]
+				}
+			}
 		},
 		"components": {
 			"minecraft:physics": {},
@@ -348,7 +371,7 @@
 			},
 			"start_boss": {
 				"add": {
-					"component_groups": ["alive", "skin_id_0", "desactive_music_component"]
+					"component_groups": ["alive", "skin_id_0", "desactive_music_component", "break_beds"]
 				},
 				"remove": { "component_groups": ["get_up"] }
 			},
@@ -512,7 +535,9 @@
 			},
 			"regen_health": {
 				"queue_command": { "command": ["effect @s regeneration 5 6 true"] }
-			}
+			},
+			"break_beds": { "add": { "component_groups": ["break_beds"] } },
+			"stop_break_beds": { "remove": { "component_groups": ["break_beds"] } }
 		}
 	}
 }

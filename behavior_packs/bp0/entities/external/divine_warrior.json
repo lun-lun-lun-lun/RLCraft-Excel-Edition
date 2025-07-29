@@ -83,7 +83,28 @@
 				"blocks_to_avoid": [{ "name": "minecraft:powder_snow" }]
 			},
 			"minecraft:experience_reward": { "on_death": "45" },
-			"minecraft:loot": { "table": "loot_tables/divine_warrior.json" }
+			"minecraft:loot": { "table": "loot_tables/divine_warrior.json" },
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bed",
+					"white_bed",
+					"orange_bed",
+					"magenta_bed",
+					"light_blue_bed",
+					"yellow_bed",
+					"lime_bed",
+					"pink_bed",
+					"gray_bed",
+					"light_gray_bed",
+					"cyan_bed",
+					"purple_bed",
+					"blue_bed",
+					"brown_bed",
+					"green_bed",
+					"red_bed",
+					"black_bed"
+				]
+			}
 		},
 		"component_groups": {},
 		"events": {}

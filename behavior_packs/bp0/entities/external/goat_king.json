@@ -29,7 +29,24 @@
 						"cherry_leaves",
 						"pale_oak_leaves",
 						"azalea_leaves",
-						"azalea_leaves_flowered"
+						"azalea_leaves_flowered",
+						"bed",
+						"white_bed",
+						"orange_bed",
+						"magenta_bed",
+						"light_blue_bed",
+						"yellow_bed",
+						"lime_bed",
+						"pink_bed",
+						"gray_bed",
+						"light_gray_bed",
+						"cyan_bed",
+						"purple_bed",
+						"blue_bed",
+						"brown_bed",
+						"green_bed",
+						"red_bed",
+						"black_bed"
 					]
 				}
 			},
