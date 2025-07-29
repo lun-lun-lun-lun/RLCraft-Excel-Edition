@@ -1,7 +1,7 @@
 {
 	"pools": [
 		{
-			"rolls": 1,
+			"rolls": 2,
 			"conditions": [{ "condition": "random_chance", "chance": 1.0 }],
 			"entries": [
 				{
@@ -31,7 +31,7 @@
 			]
 		},
 		{
-			"rolls": 1,
+			"rolls": 2,
 			"conditions": [{ "condition": "random_chance", "chance": 1.0 }],
 			"entries": [
 				{

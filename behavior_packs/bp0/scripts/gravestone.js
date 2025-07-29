@@ -50,8 +50,9 @@ export function tombsSpawn(t) {
 	})(),
 		addEffect(t, "speed", 200, 1, !1),
 		addEffect(t, "resistance", 200, 255, !1),
+		addEffect(t, "weakness", 200, 255, !1), //didnt exist before
 		t.addTag("invesibility"),
-		system.runTimeout(() => t.removeTag("invesibility"), 400),
+		system.runTimeout(() => t.removeTag("invesibility"), 200), //was 400 before
 		t.removeTag("dead_tombs");
 }
 function respawnFall(t) {

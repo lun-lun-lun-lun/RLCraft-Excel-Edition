@@ -179,6 +179,8 @@ world.afterEvents.entitySpawn.subscribe((t) => {
 						(e.removeTag("saving_grace"),
 						e.triggerEvent("hfrlc:systemLevelDeath"),
 						setScore(e, "saving_grace", 0)),
+					// Check if killed by boss and drop half items
+					o && isBossEntity(o.typeId) && dropHalfItemsOnBossDeath(e),
 					tombs_event(e)),
 				"hfrlc:death_knight" === o.typeId && DeathKnightOnKill(o, e);
 		} catch (t) {}
@@ -446,3 +448,177 @@ world.beforeEvents.itemUseOn.subscribe((t) => {
 			}
 		} catch (t) {}
 	});
+
+// Helper function to check if entity is a boss
+function isBossEntity(entityTypeId) {
+	const bossEntities = new Set([
+		"hfrlc:god_boss",
+		"hfrlc:knight_king", 
+		"hfrlc:orc_boss",
+		"hfrlc:pirate_king",
+		"hfrlc:skeleton_boss",
+		"hfrlc:spider_king",
+		"hfrlc:dwarf_king",
+		"hfrlc:death_knight",
+		"hfrlc:knight",
+		"hfrlc:frog_king",
+		"hfrlc:orc_king",
+		"hfrlc:goat_king",
+		"hfrlc:2_boss",
+		"hfrlc:boss_tower"
+	]);
+	return bossEntities.has(entityTypeId);
+}
+
+// Function to make player drop half their items when killed by boss
+function dropHalfItemsOnBossDeath(player) {
+	try {
+		const inventory = player.getComponent("inventory").container;
+		const itemsToDrop = [];
+		
+		// Protected items that should never be dropped on boss death
+		const protectedItems = new Set([
+			"hfrlc:info_book",           // RLCraft guidebook/menu
+			"hfrlc:system_level",        // Level up item
+			"hfrlc:trinket_menu",        // Trinket bag
+			"hfrlc:backpack",            // Backpack
+			"hfrlc:level_up",            // Level up token
+			"hfrlc:skill_book",          // Skill books
+			"hfrlc:waystone",            // Waystone
+			"hfrlc:warpstone",           // Warpstone
+			"minecraft:recovery_compass", // Recovery compass from graves
+			"hfrlc:teddy_of_comfort"     // Teddy bear for easy mode
+		]);
+		
+		// Collect items to drop (randomly selected,, excluding protected items)
+		for (let i = 0; i < inventory.size; i++) {
+			const item = inventory.getItem(i);
+			if (item && !protectedItems.has(item.typeId) && Math.random() < 0.3) {
+				itemsToDrop.push({slot: i, item: item});
+			}
+		}
+		
+		// Drop the selected items at player location
+		for (const itemData of itemsToDrop) {
+			// Clear from inventory first
+			inventory.setItem(itemData.slot, undefined);
+			// Drop at player location
+			player.dimension.spawnItem(itemData.item, player.location);
+		}
+		
+		// Send message to player about boss death penalty
+		if (itemsToDrop.length > 0) {
+			player.sendMessage({
+				rawtext: [
+					{ text: "§c§lBoss Death Penalty!" },
+					{ text: `§7 You lost ${itemsToDrop.length} items due to being killed by a boss.` }
+				]
+			});
+		}
+	} catch (error) {
+		// Silently handle any errors to prevent crashes
+	}
+}
+
+// System to make mobs jump to reach players on towers
+function enableMobTowerJumping() {
+	system.runInterval(() => {
+		try {
+			// Get all hostile mobs that can jump
+			const jumpingMobs = world.getDimension("overworld").getEntities({
+				families: ["monster", "mob"],
+				excludeFamilies: ["inanimate"],
+				maxDistance: 64
+			});
+
+			for (const mob of jumpingMobs) {
+				// Skip if mob doesn't have a target or is already jumping
+				if (!mob.target || mob.hasTag("jumping_cooldown")) continue;
+
+				const target = mob.target;
+				if (target.typeId !== "minecraft:player") continue;
+
+				const mobPos = mob.location;
+				const targetPos = target.location;
+				
+				// Check if target is higher than mob (4-5 blocks)
+				const heightDiff = targetPos.y - mobPos.y;
+				if (heightDiff < 3 || heightDiff > 6) continue;
+
+				// Check horizontal distance (don't jump if too far)
+				const horizontalDist = Math.sqrt(
+					Math.pow(targetPos.x - mobPos.x, 2) + 
+					Math.pow(targetPos.z - mobPos.z, 2)
+				);
+				if (horizontalDist > 8) continue;
+
+				// Check if there's a clear path upward
+				if (canMobJumpToTarget(mob, target)) {
+					performMobJump(mob, target);
+				}
+			}
+		} catch (error) {
+			// Silently handle errors
+		}
+	}, 40); // Check every 2 seconds
+}
+
+// Check if mob can jump to target location
+function canMobJumpToTarget(mob, target) {
+	const mobPos = mob.location;
+	const targetPos = target.location;
+	
+	// Check for blocks above mob that would prevent jumping
+	for (let y = 1; y <= 6; y++) {
+		const checkPos = {
+			x: Math.floor(mobPos.x),
+			y: Math.floor(mobPos.y) + y,
+			z: Math.floor(mobPos.z)
+		};
+		
+		const block = mob.dimension.getBlock(checkPos);
+		if (block && !block.isAir && block.typeId !== "minecraft:water") {
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+// Make mob jump toward target
+function performMobJump(mob, target) {
+	try {
+		const mobPos = mob.location;
+		const targetPos = target.location;
+		
+		// Add cooldown to prevent spam jumping
+		mob.addTag("jumping_cooldown");
+		system.runTimeout(() => {
+			if (mob.isValid()) {
+				mob.removeTag("jumping_cooldown");
+			}
+		}, 100); // 5 second cooldown
+
+		// Calculate jump direction
+		const direction = {
+			x: (targetPos.x - mobPos.x) * 0.3,
+			y: 1.2, // Jump height
+			z: (targetPos.z - mobPos.z) * 0.3
+		};
+
+		// Apply velocity to make mob jump
+		mob.applyImpulse(direction);
+		
+		// Add jumping effect for visibility
+		mob.addEffect("jump_boost", 60, { amplifier: 2, showParticles: false });
+		
+		// Play sound effect
+		mob.playSound("mob.endermen.portal");
+		
+	} catch (error) {
+		// Handle errors silently
+	}
+}
+
+// Start the mob jumping system
+enableMobTowerJumping();
