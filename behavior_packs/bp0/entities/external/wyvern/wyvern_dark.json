@@ -517,7 +517,7 @@
 								"target": "self"
 							},
 							"cooldown": 2,
-							"spawn_entities": "hfrlc:wyvern_air_projectile_player",
+							"spawn_entities": "hfrlc:wyvern_dark_projectile_player",
 							"interact_text": "action.interact.wyvern.shoot",
 							"swing": true
 						},
