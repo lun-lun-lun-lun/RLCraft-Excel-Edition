@@ -108,11 +108,89 @@
 		},
 		{
 			"rolls": 1,
+			"conditions": [{ "condition": "random_chance", "chance": 0.75 }],
 			"entries": [
 				{
-					"name": "minecraft:gold_ingot",
 					"type": "item",
-					"functions": [{ "function": "set_count", "count": { "min": 10, "max": 20 } }]
+					"name": "hfrlc:weapon_7",
+					"weight": 35,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:spike_sword",
+					"weight": 25,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:netherite_sword",
+					"weight": 20,
+					"functions": [
+						{ "function": "set_count", "count": { "min": 1, "max": 1 } },
+						{ "function": "enchant_with_levels", "levels": { "min": 20, "max": 30 } }
+					]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:fire_sword",
+					"weight": 15,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:bow",
+					"weight": 5,
+					"functions": [
+						{ "function": "set_count", "count": { "min": 1, "max": 1 } },
+						{ "function": "enchant_with_levels", "levels": { "min": 15, "max": 25 } }
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"conditions": [{ "condition": "random_chance", "chance": 0.6 }],
+			"entries": [
+				{
+					"type": "item",
+					"name": "hfrlc:ring_strength",
+					"weight": 30,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ring_speed",
+					"weight": 25,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:samurai_amulet",
+					"weight": 20,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ring_resistance",
+					"weight": 15,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ring_regeneration",
+					"weight": 10,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:experience_bottle",
+					"functions": [{ "function": "set_count", "count": { "min": 0, "max": 2} }]
 				}
 			]
 		}

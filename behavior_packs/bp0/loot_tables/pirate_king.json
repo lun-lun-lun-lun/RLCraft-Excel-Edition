@@ -171,6 +171,84 @@
 		},
 		{
 			"rolls": 1,
+			"conditions": [{ "condition": "random_chance", "chance": 0.65 }],
+			"entries": [
+				{
+					"type": "item",
+					"name": "hfrlc:weapon_11",
+					"weight": 35,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:trident",
+					"weight": 25,
+					"functions": [
+						{ "function": "set_count", "count": { "min": 1, "max": 1 } },
+						{ "function": "enchant_with_levels", "levels": { "min": 15, "max": 25 } }
+					]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:water_sword",
+					"weight": 20,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:crossbow",
+					"weight": 15,
+					"functions": [
+						{ "function": "set_count", "count": { "min": 1, "max": 1 } },
+						{ "function": "enchant_with_levels", "levels": { "min": 10, "max": 20 } }
+					]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ice_sword",
+					"weight": 5,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"conditions": [{ "condition": "random_chance", "chance": 0.55 }],
+			"entries": [
+				{
+					"type": "item",
+					"name": "hfrlc:ring_speed",
+					"weight": 30,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ring_jump",
+					"weight": 25,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ring_strength",
+					"weight": 20,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:pirate_necklace",
+					"weight": 15,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				},
+				{
+					"type": "item",
+					"name": "hfrlc:ring_regeneration",
+					"weight": 10,
+					"functions": [{ "function": "set_count", "count": { "min": 1, "max": 1 } }]
+				}
+			]
+		},
+		{
+			"rolls": 1,
 			"entries": [
 				{
 					"type": "item",
