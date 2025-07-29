@@ -312,7 +312,12 @@
 			"minecraft:custom_hit_test": {
 				"hitboxes": [{ "width": 3, "height": 5.7, "pivot": [0, 2.85, 0] }]
 			},
-			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
+			"minecraft:despawn": { 
+				"despawn_from_inactivity": true, 
+				"min_range_inactivity_timer": 60,
+				"min_range_random_chance": 800,
+				"despawn_from_distance": {} 
+			},
 			"minecraft:physics": {}
 		},
 		"events": {

@@ -16,7 +16,12 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
+			"minecraft:despawn": { 
+				"despawn_from_inactivity": true, 
+				"min_range_inactivity_timer": 60,
+				"min_range_random_chance": 800,
+				"despawn_from_distance": {} 
+			},
 			"minecraft:type_family": { "family": ["djinn", "mob", "ram"] },
 			"minecraft:scale": { "value": 0.65 },
 			"minecraft:knockback_resistance": { "value": 0.3 },

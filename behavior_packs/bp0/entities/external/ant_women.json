@@ -40,7 +40,12 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
+			"minecraft:despawn": { 
+				"despawn_from_inactivity": true, 
+				"min_range_inactivity_timer": 60,
+				"min_range_random_chance": 800,
+				"despawn_from_distance": {} 
+			},
 			"minecraft:health": { "value": 20, "max": 20 },
 			"minecraft:collision_box": { "width": 1, "height": 2.5 },
 			"minecraft:knockback_resistance": { "value": 1000 },
