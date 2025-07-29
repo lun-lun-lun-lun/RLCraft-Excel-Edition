@@ -23,3 +23,4 @@ To do:
 - Increased armor durability
 - Nerf Pirate Sharks
 - Beastiary
+- Lose 1 level upon death
