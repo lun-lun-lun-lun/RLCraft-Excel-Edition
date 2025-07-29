@@ -8,6 +8,7 @@ Changes:
 - Bosses, Fire & Ground wyvern spawn in the Nether
 
 To do:
+- IFrame Rolling
 - Fix health crystal bug from the original
 - Fix rats eating enchants from the original
 - Add summoning ritual for Tulum the Grandmaster
@@ -20,3 +21,4 @@ To do:
 - Mob Health Packs
 - Increased armor durability
 - Nerf Pirate Sharks
+- Beastiary
