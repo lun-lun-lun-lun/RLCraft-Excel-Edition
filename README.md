@@ -19,3 +19,4 @@ To do:
 - Ore Demons
 - Mob Health Packs
 - Increased armor durability
+- Nerf Pirate Sharks
