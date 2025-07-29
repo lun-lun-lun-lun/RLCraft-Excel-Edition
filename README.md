@@ -11,6 +11,7 @@ To do:
 - IFrame Rolling
 - Fix health crystal bug from the original
 - Fix rats eating enchants from the original
+- Trinkets effects dont disappear
 - Add summoning ritual for Tulum the Grandmaster
 - Prevent respawn cheesing
 - Bosses breaking walls
