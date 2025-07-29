@@ -23,7 +23,6 @@
 			"despawn": { "minecraft:instant_despawn": {} }
 		},
 		"components": {
-			"minecraft:persistent": {},
 			"minecraft:type_family": { "family": ["pirate_shark", "mob", "ram"] },
 			"minecraft:behavior.hurt_by_target": { "priority": 3 },
 			"minecraft:nameable": {},

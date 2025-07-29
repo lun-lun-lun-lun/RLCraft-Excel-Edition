@@ -123,7 +123,6 @@
 			}
 		},
 		"components": {
-			"minecraft:persistent": {},
 			"minecraft:behavior.hurt_by_target": { "priority": 3 },
 			"minecraft:nameable": {},
 			"minecraft:is_hidden_when_invisible": {},

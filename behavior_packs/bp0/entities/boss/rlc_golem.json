@@ -88,7 +88,6 @@
 			"minecraft:scale": { "value": 1.5 },
 			"minecraft:behavior.hurt_by_target": { "priority": 3 },
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
 			"minecraft:home": {},
 			"minecraft:type_family": { "family": ["rlc_golem", "mob", "boss"] },
 			"minecraft:damage_sensor": {
