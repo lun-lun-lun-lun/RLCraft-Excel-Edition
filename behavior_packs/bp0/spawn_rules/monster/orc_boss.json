@@ -8,12 +8,12 @@
 		"conditions": [
 			{
 				"minecraft:spawns_on_surface": {},
-				"minecraft:weight": { "default": 5 },
+				"minecraft:weight": { "default": 15 },
 				"minecraft:density_limit": { "surface": 1 },
 				"minecraft:distance_filter": { "min": 20, "max": 48 },
 				"minecraft:delay_filter": {
-					"min": 1200,
-					"max": 2400,
+					"min": 1000,
+					"max": 6600,
 					"spawn_chance": 10,
 					"identifier": "orc_boss_nether_spawn_delay"
 				},

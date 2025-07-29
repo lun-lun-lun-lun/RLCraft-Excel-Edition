@@ -16,9 +16,9 @@
 					"minecraft:ice",
 					"minecraft:snow"
 				],
-				"minecraft:weight": { "default": 200 },
-				"minecraft:density_limit": { "surface": 2 },
-				"minecraft:herd": { "min_size": 1, "max_size": 2 },
+				"minecraft:weight": { "default": 100 },
+				"minecraft:density_limit": { "surface": 1 },
+				"minecraft:herd": { "min_size": 1, "max_size": 1 },
 				"minecraft:distance_filter": { "min": 20, "max": 48 },
 				"minecraft:biome_filter": {
 					"any_of": [

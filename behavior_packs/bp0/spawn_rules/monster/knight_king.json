@@ -8,13 +8,13 @@
 		"conditions": [
 			{
 				"minecraft:spawns_on_surface": {},
-				"minecraft:weight": { "default": 5 },
+				"minecraft:weight": { "default": 15 },
 				"minecraft:density_limit": { "surface": 1 },
 				"minecraft:distance_filter": { "min": 20, "max": 48 },
 				"minecraft:delay_filter": {
-					"min": 1200,
-					"max": 2400,
-					"spawn_chance": 10,
+					"min": 800,
+					"max": 1600,
+					"spawn_chance": 25,
 					"identifier": "knight_king_nether_spawn_delay"
 				},
 				"minecraft:biome_filter": {

@@ -8,13 +8,13 @@
 		"conditions": [
 			{
 				"minecraft:delay_filter": {
-					"min": 800,
-					"max": 1200,
+					"min": 1600,
+					"max": 5000,
 					"identifier": "nether_sandworm_spawn_delay",
-					"spawn_chance": 30
+					"spawn_chance": 50
 				},
 				"minecraft:spawns_on_surface": {},
-				"minecraft:weight": { "default": 15 },
+				"minecraft:weight": { "default": 25 },
 				"minecraft:density_limit": { "surface": 1 },
 				"minecraft:herd": { "min_size": 1, "max_size": 1 },
 				"minecraft:distance_filter": { "min": 20, "max": 48 },
