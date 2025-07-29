@@ -1,0 +1,21 @@
+Changes:
+- Mobs despawn
+- Tulum the Grandmaster has a 'final boss sequence'
+- Better rewards for killing bosses, since my server plays with 4 people
+- New Mega Sandworm, still reworking some things
+- Bosses break beds
+- Dark & Poison dragons spawn in the end
+- Bosses, Fire & Ground wyvern spawn in the Nether
+
+To do:
+- Fix health crystal bug from the original
+- Fix rats eating enchants from the original
+- Add summoning ritual for Tulum the Grandmaster
+- Prevent respawn cheesing
+- Bosses breaking walls
+- Swimming enemies 
+- Lava Serpent that shoots fireballs
+- Piglins hostile to RLCraft mobs
+- Ore Demons
+- Mob Health Packs
+- Increased armor durability
