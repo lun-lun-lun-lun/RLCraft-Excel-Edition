@@ -18,7 +18,7 @@ To do:
 - Swimming enemies 
 - Lava Serpent that shoots fireballs
 - Piglins hostile to RLCraft mobs
-- Ore Demons (SSJ creakings that teleport)
+- Ore Demons (Weeping Angels)
 - Mob Health Packs
 - Increased armor durability
 - Nerf Pirate Sharks
