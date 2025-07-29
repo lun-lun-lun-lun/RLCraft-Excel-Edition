@@ -23,7 +23,14 @@
 					"def": "minecraft:dragon_fireball"
 				}
 			},
-			"dragon_death": { "minecraft:behavior.dragondeath": { "priority": 0 } }
+			"dragon_death": { "minecraft:behavior.dragondeath": { "priority": 0 } },
+			"spawn_god_boss_timer": {
+				"minecraft:timer": {
+					"time": 30,
+					"looping": false,
+					"time_down_event": { "event": "spawn_god_boss", "target": "self" }
+				}
+			}
 		},
 		"components": {
 			"minecraft:type_family": { "family": ["dragon", "mob"] },
@@ -62,10 +69,19 @@
 				"queue_command": {
 					"command": [
 						"execute as @s[tag=!death] run loot spawn ~~~ loot ender_dragon",
-						"tag @s add death"
+						"tag @s add death",
+						"tellraw @a {\"rawtext\":[{\"text\":\"§c§lBut he will not be silent.\"}]}"
 					]
 				},
-				"add": { "component_groups": ["dragon_death"] }
+				"add": { "component_groups": ["dragon_death", "spawn_god_boss_timer"] }
+			},
+			"spawn_god_boss": {
+				"queue_command": {
+					"command": [
+						"summon hfrlc:god_boss ~~5~",
+						"tellraw @a {\"rawtext\":[{\"text\":\"§6§lTulum the Grandmaster has awakened in the End!\"}]}"
+					]
+				}
 			}
 		}
 	}
