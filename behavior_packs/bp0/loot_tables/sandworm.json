@@ -37,6 +37,26 @@
 					"functions": [{ "function": "set_count", "count": 1 }]
 				}
 			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"name": "minecraft:diamond",
+					"type": "item",
+					"functions": [{ "function": "set_count", "count": { "min": 10, "max": 18 } }]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"name": "minecraft:emerald",
+					"type": "item",
+					"functions": [{ "function": "set_count", "count": { "min": 12, "max": 22 } }]
+				}
+			]
 		}
 	]
 }
