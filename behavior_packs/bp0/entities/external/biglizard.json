@@ -51,7 +51,7 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
+			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
 			"minecraft:type_family": { "family": ["biglizard", "mob", "ram"] },
 			"minecraft:follow_range": { "value": 16, "max": 16 },
 			"minecraft:attack": { "damage": 7 },
@@ -69,7 +69,6 @@
 				"inhale_time": 3.75,
 				"generates_bubbles": false
 			},
-			"minecraft:despawn": {},
 			"minecraft:jump.static": {},
 			"minecraft:hurt_on_condition": {
 				"damage_conditions": [

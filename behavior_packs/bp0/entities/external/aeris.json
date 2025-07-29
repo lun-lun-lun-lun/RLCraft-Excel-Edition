@@ -11,7 +11,6 @@
 		"components": {
 			"minecraft:input_ground_controlled": {},
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
 			"minecraft:breathable": {
 				"total_supply": 15,
 				"suffocate_time": -1,
@@ -28,7 +27,7 @@
 				"attack_duration": 0.5
 			},
 			"minecraft:type_family": { "family": ["mob", "ram"] },
-			"minecraft:despawn": { "despawn_from_distance": {} },
+			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
 			"minecraft:jump.static": {},
 			"minecraft:movement.basic": {},
 			"minecraft:hurt_on_condition": {

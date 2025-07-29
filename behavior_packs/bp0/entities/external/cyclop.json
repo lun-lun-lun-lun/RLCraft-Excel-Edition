@@ -395,6 +395,7 @@
 				"generates_bubbles": false
 			},
 			"minecraft:despawn": {
+				"despawn_from_idle": true,
 				"despawn_from_distance": { "min_distance": 32, "max_distance": 40 }
 			},
 			"minecraft:jump.static": {},
@@ -452,7 +453,6 @@
 			},
 			"minecraft:collision_box": { "width": 1.5, "height": 4.2 },
 			"minecraft:behavior.float": { "priority": 0 },
-			"minecraft:persistent": {},
 			"minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
 			"minecraft:physics": {},
 			"minecraft:conditional_bandwidth_optimization": {}

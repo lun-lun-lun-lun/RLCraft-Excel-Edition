@@ -1072,6 +1072,7 @@
 		},
 		"components": {
 			"minecraft:variant": { "value": 0 },
+			"minecraft:persistent": {},
 			"minecraft:type_family": { "family": ["dragon", "wyvern_poison", "wild"] },
 			"minecraft:environment_sensor": {
 				"triggers": [

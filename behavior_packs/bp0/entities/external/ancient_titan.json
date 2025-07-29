@@ -8,7 +8,6 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
 			"minecraft:home": {},
 			"minecraft:type_family": { "family": ["golem", "mob", "ram"] },
 			"minecraft:scale": { "value": 0.65 },
@@ -22,7 +21,7 @@
 				"inhale_time": 3.75,
 				"generates_bubbles": false
 			},
-			"minecraft:despawn": { "despawn_from_distance": {} },
+			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
 			"minecraft:jump.static": {},
 			"minecraft:movement.basic": {},
 			"minecraft:hurt_on_condition": {

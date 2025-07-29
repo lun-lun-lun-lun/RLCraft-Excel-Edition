@@ -86,7 +86,6 @@
 			"hfrlc:mob_tier3": { "minecraft:health": { "value": 550 } }
 		},
 		"components": {
-			"minecraft:persistent": {},
 			"minecraft:type_family": { "family": ["goat_king", "mob", "ram"] },
 			"minecraft:behavior.hurt_by_target": {},
 			"minecraft:nameable": {},
@@ -101,6 +100,7 @@
 				"generates_bubbles": false
 			},
 			"minecraft:despawn": {
+				"despawn_from_idle": true,
 				"despawn_from_distance": { "min_distance": 32, "max_distance": 40 }
 			},
 			"minecraft:jump.static": {},

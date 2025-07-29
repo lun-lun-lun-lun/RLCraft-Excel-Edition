@@ -16,7 +16,6 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
 			"minecraft:type_family": { "family": ["mob", "ram", "player"] },
 			"minecraft:is_hidden_when_invisible": {},
 			"minecraft:follow_range": { "value": 55, "max": 55 },
@@ -29,7 +28,7 @@
 			"minecraft:damage_sensor": {
 				"triggers": [{ "cause": "freezing", "deals_damage": false }]
 			},
-			"minecraft:despawn": { "despawn_from_distance": {} },
+			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
 			"minecraft:jump.static": {},
 			"minecraft:movement.basic": {},
 			"minecraft:movement": { "value": 0.3 },

@@ -16,7 +16,7 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
+			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} },
 			"minecraft:type_family": { "family": ["djinn", "mob", "ram"] },
 			"minecraft:scale": { "value": 0.65 },
 			"minecraft:knockback_resistance": { "value": 0.3 },
@@ -28,9 +28,6 @@
 				"suffocate_time": -1,
 				"inhale_time": 3.75,
 				"generates_bubbles": false
-			},
-			"minecraft:despawn": {
-				"despawn_from_distance": { "min_distance": 32, "max_distance": 40 }
 			},
 			"minecraft:damage_sensor": {
 				"triggers": { "cause": "fall", "deals_damage": false }

@@ -268,7 +268,7 @@
 			},
 			"minecraft:behavior.float": { "priority": 0 },
 			"minecraft:physics": {},
-			"minecraft:persistent": {}
+			"minecraft:despawn": { "despawn_from_idle": true, "despawn_from_distance": {} }
 		},
 		"events": {
 			"minecraft:entity_spawned": {

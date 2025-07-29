@@ -86,7 +86,6 @@
 			}
 		},
 		"components": {
-			"minecraft:persistent": {},
 			"minecraft:type_family": { "family": ["little_ant", "ant", "mob", "monster"] },
 			"minecraft:behavior.hurt_by_target": { "priority": 3, "alert_same_type": true },
 			"minecraft:loot": { "table": "loot_tables/little_ant.json" },
@@ -101,6 +100,7 @@
 				"generates_bubbles": false
 			},
 			"minecraft:despawn": {
+				"despawn_from_idle": true,
 				"despawn_from_distance": { "min_distance": 32, "max_distance": 40 }
 			},
 			"minecraft:jump.static": {},

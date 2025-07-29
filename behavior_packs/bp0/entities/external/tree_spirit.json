@@ -284,7 +284,6 @@
 		},
 		"components": {
 			"minecraft:physics": {},
-			"minecraft:persistent": {},
 			"minecraft:type_family": { "family": ["tree_spirits", "mob", "ram"] },
 			"minecraft:is_hidden_when_invisible": {},
 			"minecraft:follow_range": { "value": 55, "max": 55 },
@@ -295,6 +294,7 @@
 				"generates_bubbles": false
 			},
 			"minecraft:despawn": {
+				"despawn_from_idle": true,
 				"despawn_from_distance": { "min_distance": 32, "max_distance": 40 }
 			},
 			"minecraft:attack": { "damage": 0 },
