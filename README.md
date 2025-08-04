@@ -24,3 +24,6 @@ To do:
 - Nerf Pirate Sharks
 - Beastiary
 - Lose 1 level upon death
+- """Story""" (1 final boss and then I pit everyone against eachother)
+- Dragons have a chance to grow 1 scale when feeding
+- Bigger max dragon sizes
