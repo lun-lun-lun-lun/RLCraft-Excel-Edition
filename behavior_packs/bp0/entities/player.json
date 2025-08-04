@@ -102,7 +102,8 @@
 				"thirstbar": "controller.animation.thirstbar",
 				"dead_thirst": "controller.animation.dead_thirst",
 				"remove_lag.low_ram": "animation.remove_lag.low_ram",
-				"remove_lag": "animation.remove_lag"
+				"remove_lag": "animation.remove_lag",
+				"dodge_roll_detector": "controller.animation.dodge_roll_detector"
 			},
 			"scripts": {
 				"animate": [
@@ -112,6 +113,7 @@
 					"sleepingbag_loop",
 					{ "remove_lag.low_ram": "q.server_memory_tier < 3 && q.is_ignited" },
 					{ "remove_lag": "q.server_memory_tier >= 3 && q.is_ignited" },
+					"dodge_roll_detector",
 					"head_sensor",
 					"body_sensor",
 					"rarm_sensor",
@@ -1508,7 +1510,28 @@
 				}
 			},
 			"no_tutoMove": { "minecraft:movement": { "value": 0 } },
-			"defaultoMove": { "minecraft:movement": { "value": 0.1 } }
+			"defaultoMove": { "minecraft:movement": { "value": 0.1 } },
+			"dodge_roll_active": {
+				"minecraft:movement": { "value": 0.8 },
+				"minecraft:damage_sensor": {
+					"triggers": {
+						"cause": "all",
+						"deals_damage": false
+					}
+				},
+				"minecraft:timer": {
+					"time": 0.5,
+					"looping": false,
+					"time_down_event": { "event": "hfrlc:dodge_roll_end" }
+				}
+			},
+			"dodge_roll_cooldown": {
+				"minecraft:timer": {
+					"time": 2.0,
+					"looping": false,
+					"time_down_event": { "event": "hfrlc:dodge_roll_cooldown_end" }
+				}
+			}
 		},
 		"components": {
 			"minecraft:experience_reward": { "on_death": "Math.Min(q.player_level * 7, 100)" },
@@ -2489,6 +2512,21 @@
 		"events": {
 			"hfrlc:ramEvent": {},
 			"hfrlc:lens_sun": {},
+			"hfrlc:dodge_roll_start": {
+				"add": { "component_groups": ["dodge_roll_active", "dodge_roll_cooldown"] },
+				"queue_command": {
+					"command": [
+						"playsound random.pop @s",
+						"particle minecraft:explosion_particle ~~~"
+					]
+				}
+			},
+			"hfrlc:dodge_roll_end": {
+				"remove": { "component_groups": ["dodge_roll_active"] }
+			},
+			"hfrlc:dodge_roll_cooldown_end": {
+				"remove": { "component_groups": ["dodge_roll_cooldown"] }
+			},
 			"hfrlc:remove_kill_boss": { "remove": { "component_groups": ["kill_boss"] } },
 			"hfrlc:remove_timer_count": { "remove": { "component_groups": ["timer_count"] } },
 			"hfrlc:tuto_cooldown": { "add": { "component_groups": ["tuto_cooldown"] } },
