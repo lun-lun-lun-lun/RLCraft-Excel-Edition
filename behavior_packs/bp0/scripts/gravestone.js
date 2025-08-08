@@ -33,7 +33,6 @@ export function tombsHitEntity(t, e) {
 }
 export function tombsSpawn(t) {
 	if (world.isHardcore || !t.hasTag("dead_tombs")) return;
-	addEffect(t, "weakness", 200, 1, !1), //didnt exist before
 	(() => {
 		if (t.getSpawnPoint()) return;
 		const e = t.dimension.getPlayers({
@@ -51,7 +50,7 @@ export function tombsSpawn(t) {
 	})(),
 		addEffect(t, "speed", 200, 1, !1),
 		addEffect(t, "resistance", 200, 255, !1),
-		
+		addEffect(t, "weakness", 200, 255, !1), //didnt exist before
 		t.addTag("invesibility"),
 		system.runTimeout(() => t.removeTag("invesibility"), 200), //was 400 before
 		t.removeTag("dead_tombs");

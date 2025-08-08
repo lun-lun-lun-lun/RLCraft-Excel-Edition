@@ -130,7 +130,6 @@ export function tutoEvent(t, e) {
 function initialKit(t) {
 	t.setGameMode(GameMode.survival),
 		addEffect(t, "resistance", 200, 255, !1),
-		addEffect(t, "weakness", 200, 255, !1),
 		addEffect(t, "saturation", 200, 255, !1),
 		addEffect(t, "instant_health", 10, 255, !1),
 		t.triggerEvent("hfrlc:bodyparts_reset"),
